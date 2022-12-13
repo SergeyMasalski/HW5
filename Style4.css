@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --heght-element: calc(93%/4);
+    --elment-bord: calc(calc(93%/4) + 1%);
+}
+
+.container {
+    height: 470px;
+    background-color: #F5F5F5;
+    width: 70vw;
+    min-width: 820px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 40px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cards {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    gap: 10px;
+    position: relative;
+}
+
+.cards li {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    flex: 0 0 calc(24% - 20px);
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    width: var(--heght-element);
+    height: 100%;
+    box-shadow: 6px 6px 6px #adadadc4,-6px -6px 6px #ADADADc4, 6px -6px 6px #ADADADc4, -6px 6px 6px #ADADADc4;
+    transition: 1s;
+}
+
+.cards li div {
+    display: inline-flex;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.cards li div:first-of-type {
+    height: 43px;
+    align-items: center;
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+    transition: 1s;
+}
+
+.cards li div:nth-of-type(2) {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 10px 0 0;
+}
+
+.cards li div:nth-of-type(3) {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0 0 20px;
+    color: #D1D4DA;
+}
+
+.cards li div:nth-of-type(4),
+.cards li div:nth-of-type(5),
+.cards li div:nth-of-type(6),
+.cards li div:nth-of-type(7) {
+    font-weight: bold;
+    padding: 0 0 15px;
+}
+
+.cards li div:last-of-type {
+    display: inline-flex;
+    padding: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+    width: 100px;
+    margin: 28.5px auto;
+    text-align: center;
+}
+
+.cards li:first-of-type div:first-of-type {
+    border-bottom: 3px solid #C73756;
+}
+
+.cards li:first-of-type div:last-of-type {
+    background-color: #C73756; 
+} 
+
+.cards li:nth-of-type(2) div:first-of-type {
+    border-bottom: 3px solid #D7913B;
+}
+
+.cards li:nth-of-type(2) div:last-of-type {
+    background-color: #D7913B; 
+} 
+
+.cards li:nth-of-type(3) div:first-of-type {
+    border-bottom: 3px solid #2B6689;
+}
+
+.cards li:nth-of-type(3) div:last-of-type {
+    background-color: #2B6689; 
+} 
+
+.cards li:nth-of-type(4) div:first-of-type {
+    border-bottom: 3px solid #63BB34;
+}
+
+.cards li:nth-of-type(4) div:last-of-type {
+    background-color: #63BB34; 
+} 
+
+.cards li:first-of-type {
+    left: 2%;
+}
+
+.cards li:nth-of-type(2) {
+    left: calc(2% + var(--elment-bord));
+}
+
+.cards li:nth-of-type(3) {
+    left: calc(2% + var(--elment-bord) + var(--elment-bord));
+}
+
+.cards li:nth-of-type(4) {
+    left: calc(2% + var(--elment-bord) + var(--elment-bord) + var(--elment-bord));
+}
+
+.cards li:hover {
+    width: calc(var(--heght-element) + 40px);
+    z-index: 1;
+    transform: translate(-20px, -20px);
+    height: calc(100% + 40px);
+}
+
+.cards li:hover div:first-of-type {
+    padding-top: 30px;
+    height: 63px;
+    transition: 1s;
+}
